@@ -18,8 +18,8 @@ CREATE TABLE HasMascot (
 
 
 CREATE TABLE Sponsorships(
-    id integer,
-    name varchar(24),
+    id varchar(20),
+    name varchar(20) UNIQUE,
     PRIMARY KEY (id)
 );
 
@@ -37,7 +37,7 @@ CREATE TABLE City(
 CREATE TABLE TeamPlaysIn (
     id varchar(20),
     cityID varchar(20),
-    name varchar(20),
+    name varchar(20) UNIQUE,
     logo varchar(20),
     PRIMARY KEY (id, cityID),
     FOREIGN KEY (cityID) REFERENCES City(id)
@@ -52,7 +52,7 @@ CREATE TABLE PlayerPlaysFor(
     name varchar(20),
     zscore FLOAT,
     PRIMARY KEY (id),
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(name)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
@@ -65,7 +65,7 @@ CREATE TABLE Coach(
     specialization varchar(20),
     teamID varchar(20),
     PRIMARY KEY (id),
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (name)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
@@ -73,13 +73,13 @@ CREATE TABLE Coach(
 
 CREATE TABLE Funds(
     teamID varchar(20),
-    sponsorID integer,
+    sponsorID varchar(20),
     amount integer,
     PRIMARY KEY(teamID, sponsorID),
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (name)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
-    FOREIGN KEY (sponsorID) REFERENCES Sponsorships (id)
+    FOREIGN KEY (sponsorID) REFERENCES Sponsorships (name)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
@@ -88,7 +88,7 @@ CREATE TABLE Stadium(
     teamID varchar(24),
     name varchar(24),
     PRIMARY KEY (teamID),
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(name)
 );
 
 CREATE TABLE Game(
@@ -108,17 +108,17 @@ CREATE TABLE TeamPlaysGame(
     FOREIGN KEY (gameID) REFERENCES Game(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(name)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
 CREATE TABLE SeasonOf(
     year integer,
-    teamID char(24),
-    standing char(24),
+    teamID varchar(20),
+    standing varchar(20),
     PRIMARY KEY (year, teamID),
-    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(name)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
