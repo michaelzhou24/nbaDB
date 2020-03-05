@@ -8,7 +8,7 @@ const app = express();
 
 const {getHomePage} = require('./routes/index');
 
-const port = 5000;
+const port = 9000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',

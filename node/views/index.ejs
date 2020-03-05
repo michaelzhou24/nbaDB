@@ -5,6 +5,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">teamID</th>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Z-Score</th>
@@ -17,9 +18,10 @@
                         <tr>
                             <th scope="row"><%= player.id %></th>
                             <td><%= player.number %></td>
+                            <td><%= player.teamID %></td>
                             <td><%= player.name %></td>
+                            <td><%= player.zscore %></td>
                             <td><%= player.position %></td>
-                            <td><%= player.number %></td>
                             <td>
                                 <a href="/edit/<%= player.id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
                                 <a href="/delete/<%= player.id %>" class="btn btn-sm btn-danger">Delete</a>
