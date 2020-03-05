@@ -1,56 +1,124 @@
-use nbaDB;
-DROP TABLE IF EXISTS Country;
 CREATE TABLE Country(
-    coordinates char(20),
-    name char(20),
+    coordinates varchar(20),
+    name varchar(20),
     PRIMARY KEY (coordinates)
-) ENGINE=InnoDB;
+);
 
-use nbaDB;
-DROP TABLE IF EXISTS Currency;
+
 CREATE TABLE Currency(
-    coordinates char(20),
-    name char(20),
+    coordinates varchar(20),
+    name varchar(20),
     PRIMARY KEY (coordinates)
-)	ENGINE=InnoDB;
+);
 
-use nbaDB;
-DROP TABLE IF EXISTS City;
+CREATE TABLE HasMascot (
+    name varchar(20),
+    appearance varchar(30)
+);
+
+
+CREATE TABLE Sponsorships(
+    id integer,
+    name varchar(24),
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE City(
-    id Integer,
-    name CHAR(20),
-    coordinates CHAR(20),
+    id varchar(20),
+    name varchar(20),
+    coordinates varchar(20),
     gdp INTEGER,
     population INTEGER,
     PRIMARY KEY (id),
     FOREIGN KEY (coordinates) REFERENCES Country (coordinates),
     FOREIGN KEY (coordinates) REFERENCES Currency (coordinates)
-) ENGINE=InnoDB;
+);
 
-
-DROP TABLE IF EXISTS TeamPlaysIn;
-use nbaDB;
 CREATE TABLE TeamPlaysIn (
-    id Integer,
-    cityID Integer,
-    name CHAR(20),
-    logo CHAR(20),
+    id varchar(20),
+    cityID varchar(20),
+    name varchar(20),
+    logo varchar(20),
     PRIMARY KEY (id, cityID),
     FOREIGN KEY (cityID) REFERENCES City(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-)	ENGINE=InnoDB;
+);
 
-DROP TABLE IF EXISTS PlayerPlaysFor;
 CREATE TABLE PlayerPlaysFor(
-    id Integer,
-    teamID Integer,
+    id varchar(20),
+    teamID varchar(20),
     number INTEGER,
-    name CHAR(20),
-    position CHAR(20),
+    name varchar(20),
     zscore FLOAT,
     PRIMARY KEY (id),
     FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-)	ENGINE=InnoDB;
+);
+
+
+CREATE TABLE Coach(
+    id varchar(20),
+    name varchar(20),
+    years INTEGER,
+    specialization varchar(20),
+    teamID varchar(20),
+    PRIMARY KEY (id),
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+CREATE TABLE Funds(
+    teamID varchar(20),
+    sponsorID integer,
+    amount integer,
+    PRIMARY KEY(teamID, sponsorID),
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (sponsorID) REFERENCES Sponsorships (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE Stadium(
+    teamID varchar(24),
+    name varchar(24),
+    PRIMARY KEY (teamID),
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+);
+
+CREATE TABLE Game(
+    id integer,
+    teamA varchar(24),
+    teamB varchar(24),
+    winner varchar(24),
+    PRIMARY KEY (id),
+    FOREIGN KEY (teamA) REFERENCES Stadium(teamID)
+);
+
+
+CREATE TABLE TeamPlaysGame(
+    gameID integer,
+    teamID varchar(20),
+    PRIMARY KEY (gameID, teamID),
+    FOREIGN KEY (gameID) REFERENCES Game(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE SeasonOf(
+    year integer,
+    teamID char(24),
+    standing char(24),
+    PRIMARY KEY (year, teamID),
+    FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
