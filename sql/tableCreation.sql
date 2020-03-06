@@ -50,6 +50,7 @@ CREATE TABLE PlayerPlaysFor(
     teamID varchar(20),
     number INTEGER,
     name varchar(20),
+    position varchar(3),
     zscore FLOAT,
     PRIMARY KEY (id),
     FOREIGN KEY (teamID) REFERENCES TeamPlaysIn(name)
