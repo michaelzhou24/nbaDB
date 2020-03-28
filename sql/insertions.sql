@@ -24,10 +24,11 @@ INSERT INTO TeamPlaysIn values( 3, 3, "Kings", "king");
 INSERT INTO TeamPlaysIn values(4, 4, "Celtics", "clover");
 INSERT INTO TeamPlaysIn values(5, 5, "Raptors", "raptor");
 
-INSERT INTO PlayerPlaysFor values(1, 1, 30, "Stephen Curry", "G", 3.5);
-INSERT INTO PlayerPlaysFor values(2, 2, 13, "Jeremy Lin", "G", -1);
-INSERT INTO PlayerPlaysFor values(3, 3, 30, "Lebron James", "F", 4);
-INSERT INTO PlayerPlaysFor values(4, 4, 30, "Buddy Hield", "G", 3.5);
-INSERT INTO PlayerPlaysFor values(5, 5, 30, "Deaaron Fox", "G", 3.5);
+--Note* teamID now just references name
+INSERT INTO PlayerPlaysFor values(1, "Warriors", 30, "Stephen Curry", "G", 3.5);
+INSERT INTO PlayerPlaysFor values(2, "Lakers", 13, "Jeremy Lin", "G", -1);
+INSERT INTO PlayerPlaysFor values(3, "Kings", 30, "Lebron James", "F", 4);
+INSERT INTO PlayerPlaysFor values(4, "Celtics", 30, "Buddy Hield", "G", 3.5);
+INSERT INTO PlayerPlaysFor values(5, "Raptors", 30, "Deaaron Fox", "G", 3.5);
 
-SELECT * FROM PlayerPlaysFor ORDER BY id ASC;
+--TODO// create more insertions(min 5) for each remaining table in tableCreation
