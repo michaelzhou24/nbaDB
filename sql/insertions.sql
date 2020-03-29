@@ -1,57 +1,94 @@
-INSERT INTO Country values ("49, -123", "Canada");
-INSERT INTO Country values("39, -510", "Mexico");
-INSERT INTO Country values("29, -423", "Zimbabwe");
-INSERT INTO Country values("19, -323", "Australia");
-INSERT INTO Country values("9, -223", "Taiwan");
-INSERT INTO Country values("30, -123", "United States");
+INSERT INTO Country values ("56.1304° N, 106.3468° W", "Canada");
+INSERT INTO Country values("23.6345° N, 102.5528° W", "Mexico");
+INSERT INTO Country values("19.0154° S, 29.1549° E", "Zimbabwe");
+INSERT INTO Country values("25.2744° S, 133.7751° E", "Australia");
+INSERT INTO Country values("23.6978° N, 120.9605° E", "Taiwan");
+INSERT INTO Country values("37.0902° N, 95.7129° W", "United States");
 
-INSERT INTO Currency values ("49, -123", "CAD");
-INSERT INTO Currency values("39, -510", "PESO");
-INSERT INTO Currency values("29, -423", "ZMB");
-INSERT INTO Currency values("19, -323", "KANG");
-INSERT INTO Currency values("9, -223", "YEN");
-INSERT INTO Currency values("30, -123", "USD");
+INSERT INTO Currency values ("56.1304° N, 106.3468° W", "CAD");
+INSERT INTO Currency values("23.6345° N, 102.5528° W", "PESO");
+INSERT INTO Currency values("19.0154° S, 29.1549° E", "ZMB");
+INSERT INTO Currency values("25.2744° S, 133.7751° E", "KANG");
+INSERT INTO Currency values("23.6978° N, 120.9605° E", "YEN");
+INSERT INTO Currency values("37.0902° N, 95.7129° W", "USD");
 
-INSERT INTO Sponsorships(1, "Adidas")
-INSERT INTO Sponsorships(2, "Jordan")
-INSERT INTO Sponsorships(3, "Yeezy")
-INSERT INTO Sponsorships(4, "Balenciaga")
-INSERT INTO Sponsorships(5, "Nike")
+INSERT INTO Sponsorships(1, "Adidas");
+INSERT INTO Sponsorships(2, "Jordan");
+INSERT INTO Sponsorships(3, "Yeezy");
+INSERT INTO Sponsorships(4, "Balenciaga");
+INSERT INTO Sponsorships(5, "Nike");
 
-INSERT INTO Funds(1, 1, 1)
-INSERT INTO Funds(2, 2, 2)
-INSERT INTO Funds(3, 3, 3)
-INSERT INTO Funds(4, 4, 4)
-INSERT INTO Funds(5, 5, 5)
+INSERT INTO Funds(1, 1, 1);
+INSERT INTO Funds(2, 2, 2);
+INSERT INTO Funds(3, 3, 3);
+INSERT INTO Funds(4, 4, 4);
+INSERT INTO Funds(5, 5, 5);
 
-INSERT INTO City values(1, "San Francisco","49, -123", 1005000000, 600000);
-INSERT INTO City values(2, "Los Angeles", "39, -510", 200000000, 900000);
-INSERT INTO City values(3, "Sacramento", "29, -423", 500000, 300000);
-INSERT INTO City values(4, "Boston", "19, -323", 23423458, 400000);
-INSERT INTO City values(5, "Toronto", "9, -223", 300000000, 10000000);
-INSERT INTO City values(6, "Portland","49, -123", 1005000000, 600000);
-INSERT INTO City values(7, "Oklahoma City", "39, -510", 200000000, 900000);
-INSERT INTO City values(8, "Miami", "29, -423", 500000, 300000);
-INSERT INTO City values(9, "Brooklyn", "19, -323", 23423458, 400000);
-INSERT INTO City values(10, "New York", "9, -223", 300000000, 10000000);
+INSERT INTO City values(1, "GS", "San Francisco","37.7749° N, 122.4194° W", 1005000000, 600000);
+INSERT INTO City values(2, "LA", "Los Angeles", "34.0522° N, 118.2437° W", 200000000, 900000);
+INSERT INTO City values(3, "SAC", "Sacramento", "38.5816° N, 121.4944° W", 500000, 300000);
+INSERT INTO City values(4, "BOS", "Boston", "42.3656° N, 71.0096° W", 23423458, 400000);
+INSERT INTO City values(5, "TOR", "Toronto", "43.6777° N, 79.6248° W", 300000000, 10000000);
+INSERT INTO City values(6, "POR", "Portland","45.5051° N, 122.6750° W", 1005000000, 600000);
+INSERT INTO City values(7, "OKC", "Oklahoma City", "35.4676° N, 97.5164° W", 200000000, 900000);
+INSERT INTO City values(8, "MIA", "Miami", "25.7617° N, 80.1918° W", 500000, 300000);
+INSERT INTO City values(9, "BKN", "Brooklyn", "40.6782° N, 73.9442° W", 23423458, 400000);
+INSERT INTO City values(10, "NY", "New York", "40.7128° N, 74.0060° W", 300000000, 10000000);
+INSERT INTO City values(12, "MIN", "Minnesota", "46.7296° N, 94.6859° W", 200000000, 900000);
+INSERT INTO City values(13, "CHI", "Chicago", "41.8781° N, 87.6298° W", 500000, 300000);
+INSERT INTO City values(14, "DET", "Detriot", "42.3314° N, 83.0458° W", 23423458, 400000);
+INSERT INTO City values(15, "PHX", "Phoenix", "33.4484° N, 112.0740° W", 300000000, 10000000);
+INSERT INTO City values(16, "DAL", "Dallas","32.7767° N, 96.7970° W", 1005000000, 600000);
+INSERT INTO City values(17, "SA", "San Antonio", "29.4241° N, 98.4936° W", 200000000, 900000);
+INSERT INTO City values(18, "HOU", "Houston", "29.7604° N, 95.3698° W", 500000, 300000);
+INSERT INTO City values(19, "ORL", "Orlando", "28.5383° N, 81.3792° W", 23423458, 400000);
+INSERT INTO City values(20, "ATL", "Atlanta", "33.7490° N, 84.3880° W", 300000000, 10000000);
+INSERT INTO City values(21, "CHA", "Charlotte","35.2271° N, 80.8431° W", 1005000000, 600000);
+INSERT INTO City values(22, "NO", "New Orleans", "29.9511° N, 90.0715° W", 200000000, 900000);
+INSERT INTO City values(29, "MEM", "Memphis", "35.1495° N, 90.0490° W", 500000, 300000);
+INSERT INTO City values(24, "UTAH", "Utah", "39.3210° N, 111.0937° W", 23423458, 400000);
+INSERT INTO City values(25, "DEN", "Denver", "39.7392° N, 104.9903° W", 300000000, 10000000);
+INSERT INTO City values(26, "PHI", "Philidelphia","39.9526° N, 75.1652° W", 1005000000, 600000);
+INSERT INTO City values(27, "WASH", "Washington, DC", "38.9072° N, 77.0369° W", 200000000, 900000);
+INSERT INTO City values(30, "IND", "Indiana", "40.2672° N, 86.1349° W", 300000000, 10000000);
+INSERT INTO City values(31, "CLE", "Cleveland", "41.4993° N, 81.6944° W", 300000000, 10000000);
 
-INSERT INTO HasMascot("Laquan", "Wolf")
-INSERT INTO HasMascot("Mike", "Hunter")
-INSERT INTO HasMascot("Wen", "Spider")
-INSERT INTO HasMascot("Michael", "Bat")
-INSERT INTO HasMascot("Asad", "Lion")
+INSERT INTO HasMascot("Laquan", "Wolf");
+INSERT INTO HasMascot("Mike", "Hunter");
+INSERT INTO HasMascot("Wen", "Spider");
+INSERT INTO HasMascot("Michael", "Bat");
+INSERT INTO HasMascot("Asad", "Lion");
 
 INSERT INTO TeamPlaysIn values(1, 1, "Warriors", "bridge");
 INSERT INTO TeamPlaysIn values(2, 2, "Lakers", "basketball");
-INSERT INTO TeamPlaysIn values( 3, 3, "Kings", "king");
+INSERT INTO TeamPlaysIn values(3, 3, "Kings", "king");
 INSERT INTO TeamPlaysIn values(4, 4, "Celtics", "clover");
 INSERT INTO TeamPlaysIn values(5, 5, "Raptors", "raptor");
 INSERT INTO TeamPlaysIn values(6, 6, "Trail Blazers", "trailblazer");
 INSERT INTO TeamPlaysIn values(7, 2, "Clippers", "paperclip");
-INSERT INTO TeamPlaysIn values(8, 8, "Thunder", "thunder");
-INSERT INTO TeamPlaysIn values(9, 9, "Heat", "basketballhot");
-INSERT INTO TeamPlaysIn values(10, 10, "Nets", "net");
-INSERT INTO TeamPlaysIn values(11, 11, "Knicks", "knick");
+INSERT INTO TeamPlaysIn values(8, 7, "Thunder", "thunder");
+INSERT INTO TeamPlaysIn values(9, 8, "Heat", "basketballhot");
+INSERT INTO TeamPlaysIn values(10, 9, "Nets", "net");
+INSERT INTO TeamPlaysIn values(11, 10, "Knicks", "knick");
+INSERT INTO TeamPlaysIn values(12, 12, "Timberwolves", "wolf");
+INSERT INTO TeamPlaysIn values(13, 13, "Bulls", "bull");
+INSERT INTO TeamPlaysIn values(14, 14, "Pistons", "pistonengine");
+INSERT INTO TeamPlaysIn values(15, 15, "Phoenix", "sun");
+INSERT INTO TeamPlaysIn values(16, 16, "Mavericks", "maverick");
+INSERT INTO TeamPlaysIn values(17, 17, "Spurs", "spur");
+INSERT INTO TeamPlaysIn values(18, 18, "Rockets", "rocket");
+INSERT INTO TeamPlaysIn values(19, 19, "Magic", "disney");
+INSERT INTO TeamPlaysIn values(20, 20, "Hawks", "hawk");
+INSERT INTO TeamPlaysIn values(21, 21, "Hornets", "hornet");
+INSERT INTO TeamPlaysIn values(22, 22, "Pelicans", "bird");
+INSERT INTO TeamPlaysIn values(24, 24, "Jazz", "sax");
+INSERT INTO TeamPlaysIn values(25, 25, "Nuggets", "gold");
+INSERT INTO TeamPlaysIn values(26, 26, "Sixers", "bell");
+INSERT INTO TeamPlaysIn values(27, 27, "Wizards", "wizard");
+INSERT INTO TeamPlaysIn values(29, 29, "Grizzlies", "bear");
+INSERT INTO TeamPlaysIn values(30, 30, "Bucks", "buck");
+INSERT INTO TeamPlaysIn values(31, 31, "Pacers", "ball");
+INSERT INTO TeamPlaysIn values(31, 31, "Cavaliers", "c");
 
 INSERT INTO Stadium(1, "Rogers' Arena");
 INSERT INTO Stadium(2, "GMC Center");
@@ -64,6 +101,16 @@ INSERT INTO Game(2, "Warriors", "Raptors", "Raptors");
 INSERT INTO Game(3, "Warriors", "Bucks", "Bucks");
 INSERT INTO Game(4, "Warriors", "Clippers", "Clippers");
 INSERT INTO Game(5, "Warriors", "Jazz", "Jazz");
+INSERT INTO Game(6, "Warriors", "Lakers", "Warriors");
+INSERT INTO Game(7, "Clippers", "Raptors", "Clippers");
+INSERT INTO Game(8, "Jazz", "Bucks", "Jazz");
+INSERT INTO Game(9, "Kings", "Clippers", "Kings");
+INSERT INTO Game(10, "Grizzlies", "Jazz", "Grizzlies");
+INSERT INTO Game(11, "Hawks", "Lakers", "Hawks");
+INSERT INTO Game(12, "Nets", "Raptors", "Raptors");
+INSERT INTO Game(13, "Timberwolves", "Bucks", "Timberwolves");
+INSERT INTO Game(14, "Bulls", "Clippers", "Clippers");
+INSERT INTO Game(15, "Warriors", "Trail Blazers", "Trail Blazers");
 
 --Note* teamID now just references name
 INSERT INTO PlayerPlaysFor values(1, "Warriors", 30, "Stephen Curry", "G", 3.5);
@@ -76,16 +123,26 @@ INSERT INTO PlayerPlaysFor values(7, "Thunder", 3, "Chris Paul", "G", 2);
 INSERT INTO PlayerPlaysFor values(8, "Heat", 14, "Jimmy Butler", "F", 3);
 INSERT INTO PlayerPlaysFor values(9, "Nets", 35, "Kevin Durant", "F", 4);
 INSERT INTO PlayerPlaysFor values(10, "Knicks", 23, "RJ Barrett", "F", 1);
+INSERT INTO PlayerPlaysFor values(1, "Warriors", 30, "Klay Thompson", "G", 3.5);
+INSERT INTO PlayerPlaysFor values(2, "Lakers", 23, "Anthony Davis", "F", 4);
+INSERT INTO PlayerPlaysFor values(3, "Kings", 23, "Draymond Green", "F", 2);
+INSERT INTO PlayerPlaysFor values(4, "Celtics", 8, "Marcus Smart", "F", 1.5);
+INSERT INTO PlayerPlaysFor values(5, "Raptors", 4, "Fred VanVleet", "G", 1);
+INSERT INTO PlayerPlaysFor values(6, "Clippers", 13, "Paul George", "F", 3);
+INSERT INTO PlayerPlaysFor values(7, "Thunder", 9, "Steven Adams", "C", 2);
+INSERT INTO PlayerPlaysFor values(8, "Heat", 14, "Dion Waiters", "G", -2);
+INSERT INTO PlayerPlaysFor values(9, "Nets", 1, "Kyrie Irving", "G", 3);
+INSERT INTO PlayerPlaysFor values(10, "Knicks", 0, "Zion Williamson", "F", 4);
 
-INSERT INTO TeamPlaysGame(1, 2)
-INSERT INTO TeamPlaysGame(2, 3)
-INSERT INTO TeamPlaysGame(3, 6)
-INSERT INTO TeamPlaysGame(4, 5)
-INSERT INTO TeamPlaysGame(5, 1)
+INSERT INTO TeamPlaysGame(1, 2);
+INSERT INTO TeamPlaysGame(2, 3);
+INSERT INTO TeamPlaysGame(3, 6);
+INSERT INTO TeamPlaysGame(4, 5);
+INSERT INTO TeamPlaysGame(5, 1);
 
-INSERT INTO SeasonOf(2012, 1, "First")
-INSERT INTO SeasonOf(2013, 2, "Third")
-INSERT INTO SeasonOf(2014, 3, "Second")
-INSERT INTO SeasonOf(2015, 4, "Tenth")
-INSERT INTO SeasonOf(2016, 5, "Seventh")
+INSERT INTO SeasonOf(2012, 1, "First");
+INSERT INTO SeasonOf(2013, 2, "Third");
+INSERT INTO SeasonOf(2014, 3, "Second");
+INSERT INTO SeasonOf(2015, 4, "Tenth");
+INSERT INTO SeasonOf(2016, 5, "Seventh");
 --TODO// create more insertions(min 5) for each remaining table in tableCreation

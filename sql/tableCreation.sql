@@ -25,6 +25,7 @@ CREATE TABLE Sponsorships(
 
 CREATE TABLE City(
     id varchar(20),
+    abbrev varchar(4),
     name varchar(20),
     coordinates varchar(20),
     gdp INTEGER,
