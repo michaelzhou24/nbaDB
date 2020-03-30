@@ -3,9 +3,9 @@
 CREATE VIEW teamPlayers AS 
 SELECT teamplaysin.name AS Team, playerplaysfor.name AS Player, 
 playerplaysfor.number AS Num, playerplaysfor.position AS Pos
-FROM teamplaysin, playerplaysfor
-GROUP BY teamplaysin.name
-ORDER BY playerplaysfor.position;
+FROM teamplaysin Inner JOIN playerplaysfor
+ON teamplaysin.id=playerplaysfor.teamID
+ORDER BY Team
 
 Go --remove Go in mysql
 
