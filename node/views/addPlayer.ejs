@@ -1,0 +1,32 @@
+<%- include ('partials/header.ejs'); -%>
+    <div class="table-wrapper">
+        <% if (viewPlayers.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col">Player</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% viewPlayers.forEach((viewPlayer, index) => { %>
+                        <tr>
+                            <th scope="row"><%= viewPlayer.Team %></th>
+                            <td><%= viewPlayer.Player %></td>
+                            <td><%= viewPlayer.Num %></td>
+                            <td><%= viewPlayer.Pos %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No players found. Go <a href="/addPlayer" >here</a> to add players.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
+<!-- TODO// add fields to add a new player above table,
+the view is used to show user what players are already in db-->>

@@ -7,6 +7,8 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
+const {getTeams} = require('./routes/viewTeams');
+const {getPlayer} = require('./routes/addPlayer');
 
 const port = 9000;
 const db = mysql.createConnection({
@@ -33,6 +35,8 @@ app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
 
 app.get('/', getHomePage);
+app.get('/viewTeams', getTeams);
+app.get('/addPlayer', getPlayer);
 
 
 // set the app to listen on the port
